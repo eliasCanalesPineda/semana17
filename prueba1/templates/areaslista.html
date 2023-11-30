@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Areas</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        caption{
+            border: 3px solid black;
+            background-color: chartreuse;
+        }
+        table{
+            width: 70%;
+            background-color: aqua;
+            border: 3px solid blue;
+        }
+        tr{
+            background-color: white;
+            border: 3px solid blue;
+        }
+        th{
+            color: white;
+            background-color: brown;
+        }td{
+            color: white;
+            background-color: navy;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Página De Áreas</h1>
+    <table>
+        <caption> Lista de Áreas</caption>
+        <tr>
+            <th>id</th>
+            <th>Nombre_del_area</th>
+            <th>Descripcion</th>
+        </tr>
+        {% for area in areas %}
+        <tr>
+            <td>{{ area.id }}</td>
+            <td>{{ area.Nombre_del_area }}</td>
+            <td>{{ area.Descripcion }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

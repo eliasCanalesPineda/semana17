@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventas</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        caption{
+            border: 3px solid black;
+            background-color: chartreuse;
+        }
+        table{
+            width: 70%;
+            background-color: aqua;
+            border: 3px solid blue;
+        }
+        tr{
+            background-color: white;
+            border: 3px solid blue;
+        }
+        th{
+            color: white;
+            background-color: brown;
+        }td{
+            color: white;
+            background-color: navy;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Página De Ventas</h1>
+    <table>
+        <caption> Lista de ventas</caption>
+        <tr>
+            <th>id</th>
+            <th>Fecha_Venta</th>
+            <th>Monto</th>
+            <th>Clienteid</th>
+            <th>EmpleadoID</th>
+        </tr>
+        {% for venta in ventas %}
+        <tr>
+            <td>{{ venta.id }}</td>
+            <td>{{ venta.Fecha_Venta }}</td>
+            <td>{{ venta.Monto }}</td>
+            <td>{{ venta.Clienteid }}</td>
+            <td>{{ venta.EmpleadoID }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
